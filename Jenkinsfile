@@ -25,7 +25,7 @@ pipeline {
         stage('Node.js App Build') {
             steps {
                 script {
-                  sh 'docker build -t momynkul/cicdepamimage'
+                  sh 'docker build -t momynkul/cicdepamimage .'
                   sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin docker.io'
                   sh 'docker push momynkul/cicdepamimage'
                   sh 'docker logout'
