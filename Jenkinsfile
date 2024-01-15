@@ -12,7 +12,8 @@ pipeline {
 
         stage('App Build') {
             steps {
-              sh 'script scripts/build.sh'
+                sh 'chmod 777 scripts/build.sh'
+                sh 'script scripts/build.sh'
             }
         }
 
