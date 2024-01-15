@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {     
-        DOCKERHUB_CREDENTIALS= credentials('dhub')
+        DOCKERHUB_CREDENTIALS= credentials('qhub')
     }    
     stages {
         stage('Git Checkout') {
